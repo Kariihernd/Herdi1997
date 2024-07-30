@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="es" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERDI 1997</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+  /* Estilos para las categorías */
+    .categorias {
+        display: none;
+        position: absolute;
+color:black;
+        background-color: #fefefe;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: 10px;
+        z-index: 1;
+    }
+
+    /* Estilos para el enlace "Vino" */
+    .vino-link {
+        cursor: pointer;
+            
+        }
+        /* Estilos en línea para el ejemplo */
+        header {
+             background-color: PURPLE; /* Color de fondo del encabezado */
+            color: white; /* Color del texto del encabezado */
+            padding: 20px; /* Espaciado interno del encabezado */
+            display: flex; /* Para alinear elementos horizontalmente */
+            justify-content: space-between; /* Espacio entre elementos */
+            align-items: center; /* Centrar verticalmente */
+        }
+   header h1 {
+    font-family: 'Segoe Script', cursive;
+    font-size: 15px;
+    margin: 0;
+    text-align: center;
+}
+        header img {
+            width:100px; /* Ancho del logo */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+        nav ul {
+            list-style-type: none; /* Quitar viñetas de la lista */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Alinear elementos horizontalmente */
+        }
+        nav ul li {
+            margin-right: 20px; /* Espacio entre elementos */
+        }
+        nav ul li a {
+            color: white; /* Color del texto del enlace */
+            text-decoration: none; /* Quitar subrayado del enlace */
+            padding: 10px 15px; /* Añadir espacio alrededor del texto */
+            border-radius: 5px; /* Añadir esquinas redondeadas */
+            transition: background-color 0.3s; /* Transición suave */
+        }
+        nav ul li a:hover {
+             text-decoration: underline; /* Cambiar el color de fondo al pasar el mouse */
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: PURPLE; /* Color de fondo del encabezado */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        header img.logo {
+            width: 100px;
+            height: auto;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .product {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            width: 250px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            max-width: 150px;
+        }
+        .product h3 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .product p {
+            margin: 5px 0;
+        }
+  .quantity {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+        }
+        .quantity button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .quantity span {
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        .checkout button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .checkout button:last-child {
+            background-color: #007bff;
+        }
+        footer {
+             background-color: PURPLE; /* Color de fondo del pie de página */
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .contact-info, .social-media {
+            margin: 10px;
+        }
+        .social-media ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .social-media ul li {
+            margin: 0 10px;
+        }
+        .social-media ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }     .total {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .checkout {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .checkout button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+        .cesta-container {
+            margin-top: 30px;
+        }
+        .cesta-header {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .cesta-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            animation: fadeIn 0.5s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            animation: slideIn 0.5s;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); }
+            to { transform: translateY(0); }
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        input[type=text], input[type=email], select {
+            width: 100%;
+            padding: 12px;
+            margin: 6px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input[type=text]:focus, input[type=email]:focus, select:focus {
+            border-color: #4CAF50;
+        }
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        input[type=submit]:hover {
+            background-color: #45a049;
+            transform: scale(1.02);
+        }
+        .icono {
+            margin-right: 10px;
+        }
+        .payment-details {
+            display: none;
+            margin-top: 20px;
+        }
+        .payment-details label,
+        .payment-details input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .payment-details input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .payment-details h4 {
+            margin-bottom: 15px;
+        }
+ .product img:hover {
+            transform: scale(1.05); /* Aumenta el tamaño al pasar el cursor sobre la imagen */
+            transition: transform 0.3s ease; /* Agrega una transición suave */
+            cursor: pointer; /* Cambia el cursor al pasar sobre la imagen */
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        let cantidad = [0, 0, 0];
+        let precios = [30.00, 25.00, 20.00];
+        let cesta = [];
+
+        function actualizarCantidad(index, delta) {
+            cantidad[index] += delta;
+            if (cantidad[index] < 0) cantidad[index] = 0;
+            document.getElementById(`cantidad${index}`).innerText = cantidad[index];
+            actualizarTotal();
+        }
+
+        function actualizarTotal() {
+            let total = 0;
+            for (let i = 0; i < cantidad.length; i++) {
+                total += cantidad[i] * precios[i];
+            }
+            document.getElementById("total").innerText = "TOTAL: " + total.toFixed(2) + " €";
+        }
+
+        function mostrarCestaModal() {
+            mostrarCesta();
+            document.getElementById("modal-cesta").style.display = "block";
+        }
+
+        function agregarACesta(index) {
+            if (cantidad[index] > 0) {
+                cesta.push({
+                    nombre: `Producto ${index + 1}`,
+                    precio: precios[index],
+                    cantidad: cantidad[index],
+                    total: (precios[index] * cantidad[index]).toFixed(2)
+                });
+                cantidad[index] = 0;
+                document.getElementById(`cantidad${index}`).innerText = cantidad[index];
+            }
+            actualizarTotal();
+        }
+
+        function mostrarCesta() {
+            const cestaContainer = document.getElementById("cesta-container");
+            cestaContainer.innerHTML = "";
+            let subtotal = 0;
+            cesta.forEach(item => {
+                subtotal += parseFloat(item.total);
+                const itemDiv = document.createElement("div");
+                itemDiv.className = "cesta-item";
+                itemDiv.innerHTML = `${item.nombre} | ${item.cantidad} x ${item.precio.toFixed(2)} € = ${item.total} €`;
+                cestaContainer.appendChild(itemDiv);
+            });
+            const subtotalDiv = document.createElement("div");
+            subtotalDiv.className = "total";
+            subtotalDiv.innerText = "Subtotal: " + subtotal.toFixed(2) + " €";
+            cestaContainer.appendChild(subtotalDiv);
+        }
+
+        function cerrarModal() {
+            document.getElementById("modal-cesta").style.display = "none";
+        }
+
+        function abrirModalPago() {
+            document.getElementById("modal-pago").style.display = "block";
+        }
+
+        function cerrarModalPago() {
+            document.getElementById("modal-pago").style.display = "none";
+        }
+
+        function validarCampos() {
+            const nombre = document.getElementById("nombre").value;
+            const apellidos = document.getElementById("apellidos").value;
+            const direccion = document.getElementById("direccion").value;
+            const codigoPostal = document.getElementById("codigo_postal").value;
+            const poblacion = document.getElementById("poblacion").value;
+            const telefono = document.getElementById("telefono").value;
+
+            if (nombre === "" || apellidos === "" || direccion === "" || codigoPostal === "" || poblacion === "" || telefono === "") {
+                alert("Por favor, complete todos los campos.");
+                return false;
+            }
+            alert("Compra con éxito");
+            return true;
+        }
+
+        function mostrarMensajeExito() {
+            const mensajeExito = document.getElementById("mensaje-exito");
+            mensajeExito.style.display = "block";
+            setTimeout(function() {
+                mensajeExito.style.display = "none";
+            }, 3000);
+        }
+
+        function validarFormulario() {
+            if (!validarCampos()) {
+                return;
+            }
+            cerrarModal();
+            mostrarMensajeExito();
+        }
+
+    function mostrarDetallesPago() {
+        var metodosPago = document.getElementsByName('metodo_pago');
+        var detallesTarjeta = document.getElementById('detalles-tarjeta');
+        var detallesPayPal = document.getElementById('detalles-paypal');
+        var detallesTransferencia = document.getElementById('detalles-transferencia');
+        
+        detallesTarjeta.style.display = 'none';
+        detallesPayPal.style.display = 'none';
+        detallesTransferencia.style.display = 'none';
+
+        for (var i = 0; i < metodosPago.length; i++) {
+            if (metodosPago[i].checked) {
+                var metodoSeleccionado = metodosPago[i].value;
+                if (metodoSeleccionado === 'tarjeta') {
+                    detallesTarjeta.style.display = 'block';
+                } else if (metodoSeleccionado === 'paypal') {
+                    detallesPayPal.style.display = 'block';
+                } else if (metodoSeleccionado === 'transferencia') {
+                    detallesTransferencia.style.display = 'block';
+                }
+            }
+        }
+    }
+              document.addEventListener("DOMContentLoaded", function() {
+            var vinoLink = document.querySelector('.vino-link');
+            var categorias = document.querySelector('.categorias');
+
+            vinoLink.addEventListener('click', function() {
+                if (categorias.style.display === "none" || categorias.style.display === "") {
+                    categorias.style.display = "block";
+                } else {
+                    categorias.style.display = "none";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<header>
+    <h1>Explora el mundo a travez del vino, un sorbo a la vez</h1>
+    <!-- Cambia "ruta_del_logo.png" por la ruta de tu logo -->
+     <img src="https://i.pinimg.com/736x/c9/cb/58/c9cb587e9e93d8927533aff39c8dbc7c.jpg" class="logo">
+    <nav>
+       <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <div>
+                <li><a class="Vino-link">Vino</a></li>
+                <div class="categorias">
+                    <li><a href="vino blanco.html" style="color: black;">Vino Blanco</a></li>
+                    <li><a href="vinos rosa.html" style="color: black;">Vino Rosa</a></li>
+                    <li><a href="vinos tinto.htmlL" style="color: black;">Vino Tinto</a></li>
+                    <!-- Agrega más categorías según sea necesario -->
+                </div>
+            </div>
+            <li><a href="acerca de.html">Sobre nosotros</a></li>
+            <li><a href="geleria.html">Galeria</a></li>
+            <!-- Agrega más elementos de lista según sea necesario -->
+        </ul>
+    </nav>
+</header>
+
+    <div class="container">
+        <div class="product">
+   <a href="sauvingnon blanc pole position.html">
+   <img src="https://api.mmh.hn/storage/30/VINO-SANTA-HELENA-VARIETAL-SAUVIGNON-BLANC-12x750-ml.jpg" alt="Producto 1" style="max-width: 200%; height: auto;">
+</a>
+            <h3>Producto 1</h3>
+            <p>Precio: 30.00 €</p>
+            <div class="quantity">
+                <button onclick="actualizarCantidad(0, -1)"><i class="fas fa-minus"></i></button>
+                <span id="cantidad0">0</span>
+                <button onclick="actualizarCantidad(0, 1)"><i class="fas fa-plus"></i></button>
+            </div>
+            <button onclick="agregarACesta(0)">Añadir a cesta</button>
+  <button onclick="mostrarCestaModal()">Ver cesta</button>
+        </div>
+        <div class="product">
+   <a href="reisling.html">
+            <img src="https://camposdesolana.com/wp-content/uploads/2017/01/Botellas-780x1589-9.png" alt="Producto 2"  style="max-width: 65%; height: auto;">
+</a>
+            <h3>Producto 2</h3>
+            <p>Precio: 25.00 €</p>
+            <div class="quantity">
+                <button onclick="actualizarCantidad(1, -1)"><i class="fas fa-minus"></i></button>
+                <span id="cantidad1">0</span>
+                <button onclick="actualizarCantidad(1, 1)"><i class="fas fa-plus"></i></button>
+            </div>
+            <button onclick="agregarACesta(1)">Añadir a cesta</button>
+  <button onclick="mostrarCestaModal()">Ver cesta</button>
+        </div>
+        <div class="product">
+   <a href="historia monaco.html">
+              <img src="https://liquidindulgence.co.uk/wp-content/uploads/US-11th-Hour-Chardonnay.jpg" alt="Producto 3"  style="max-width: 100%; height: auto;">
+</a>
+            <h3>Producto 3</h3>
+            <p>Precio: 20.00 €</p>
+            <div class="quantity">
+                <button onclick="actualizarCantidad(2, -1)"><i class="fas fa-minus"></i></button>
+                <span id="cantidad2">0</span>
+                <button onclick="actualizarCantidad(2, 1)"><i class="fas fa-plus"></i></button>
+            </div>
+            <button onclick="agregarACesta(2)">Añadir a cesta</button>
+  <button onclick="mostrarCestaModal()">Ver cesta</button>
+        </div>
+    </div>
+ <div id="modal-cesta" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <div class="container cesta-container">
+            <div class="cesta-header">Cesta de Compras</div>
+            <div id="cesta-container"></div>
+        </div>
+        <div class="checkout">
+            <button onclick="abrirModalPago()">COMPRAR AHORA</button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-pago" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModalPago()">&times;</span>
+        <h3>Información de Pago</h3>
+        <p>Selecciona un método de pago:</p>
+        <input type="radio" id="tarjeta" name="metodo_pago" value="tarjeta" onchange="mostrarDetallesPago()">
+        <label for="tarjeta"><i class="fas fa-credit-card icono"></i>Tarjeta de crédito</label><br>
+        <input type="radio" id="paypal" name="metodo_pago" value="paypal" onchange="mostrarDetallesPago()">
+        <label for="paypal"><i class="fas fa-paypal icono"></i>PayPal</label><br>
+        <input type="radio" id="transferencia" name="metodo_pago" value="transferencia" onchange="mostrarDetallesPago()">
+        <label for="transferencia"><i class="fas fa-university icono"></i>Transferencia bancaria</label><br>
+
+        <div id="detalles-tarjeta" class="payment-details">
+            <h4>Detalles de la Tarjeta de Crédito</h4>
+            <label for="numeroTarjeta">Número de Tarjeta:</label>
+            <input type="text" id="numeroTarjeta" name="numeroTarjeta"><br>
+            <label for="nombreTitular">Nombre del Titular:</label>
+            <input type="text" id="nombreTitular" name="nombreTitular"><br>
+            <label for="fechaExpiracion">Fecha de Expiración (MM/AA):</label>
+            <input type="text" id="fechaExpiracion" name="fechaExpiracion"><br>
+            <label for="codigoSeguridad">Código de Seguridad:</label>
+            <input type="text" id="codigoSeguridad" name="codigoSeguridad"><br>
+        </div>
+
+        <div id="detalles-paypal" class="payment-details">
+            <h4>Detalles de PayPal</h4>
+            <label for="correoPayPal">Correo Electrónico:</label>
+            <input type="email" id="correoPayPal" name="correoPayPal"><br>
+        </div>
+
+        <div id="detalles-transferencia" class="payment-details">
+            <h4>Detalles de la Transferencia Bancaria</h4>
+            <label for="numeroCuenta">Número de Cuenta:</label>
+            <input type="text" id="numeroCuenta" name="numeroCuenta"><br>
+        </div>
+        
+        <h3>Dirección de Entrega</h3>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos"><br>
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion"><br>
+        <label for="codigo_postal">Código Postal:</label>
+        <input type="text" id="codigo_postal" name="codigo_postal"><br>
+        <label for="poblacion">Población:</label>
+        <input type="text" id="poblacion" name="poblacion"><br>
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono"><br>
+
+        <button onclick="validarFormulario()">Enviar</button>
+    </div>
+</div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p>Email: info@herdi1997.com</p>
+                <p>Teléfono: +1234567890</p>
+            </div>
+            <div class="social-media">
+                <h3>Redes Sociales</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=61560511971163&mibextid=ZbWKwL"  target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://twitter.com/kariihernd" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/liizhernd" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,377 @@
+<HTML>
+<html lang="es" id="htmlTag">
+<HEAD>
+<TITLE>HERDI 1997</TITLE>
+</HEAD>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERDI 1997</title>
+    <!-- Enlace opcional a tu archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Enlace a una biblioteca de iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+  footer {
+            background-color:  #ff669d; /* Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+        .redes-sociales a:hover {
+            text-decoration: underline; /* Cambiar color al pasar el mouse */
+        }
+        .highlight {
+            font-family: 'Permanent Marker', cursive; /* Cambiar la fuente */
+            font-size: 30px; /* Tamaño de fuente más grande */
+            background-color:  #ff669d;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+        .menu-container {
+            background-color:#ff669d;/* Color morado lila */
+            padding: 10px 0; /* Espaciado interno */
+            text-align: center;
+        }
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .menu li a {
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+        }
+        .container {
+            display: flex;
+            width: 100%;
+            flex: 1; /* Para que ocupe todo el espacio disponible verticalmente */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+        }
+        .left, .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            flex-direction: column; /* Asegura que el contenido dentro de cada contenedor se apile verticalmente */
+        }
+        .h2 {
+            font-family: 'Permanent Marker', cursive; /* Cambiar la fuente */
+        }
+        .right {
+            background-color: white; /* Fondo blanco */
+            justify-content: center; /* Centrar contenido verticalmente */
+            align-items: center; /* Centrar contenido horizontalmente */
+            text-align: center;
+        }
+        . h2 {
+            color: black; /* Color negro */
+            font-size: 25px; /* Tamaño de fuente más grande */
+            margin-bottom: 15px; /* Espacio inferior */
+        }
+        /* Estilos para las categorías */
+        .categorias {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            z-index: 1;
+        }
+        .categorias ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .categorias ul li {
+            margin-bottom: 5px;
+        }
+        .categorias ul li a {
+            color: black;
+            text-decoration: none;
+        }
+        .right img {
+            max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+            height: auto;
+        }
+    /* Estilos para las categorías */
+    .categorias {
+        display: none;
+        position: absolute;
+color:black;
+        background-color: #fefefe;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: 10px;
+        z-index: 1;
+    }
+
+    /* Estilos para el enlace "Vino" */
+    .Vino-link {
+        cursor: pointer;
+            
+        }
+
+
+
+        /* Estilos en línea para el ejemplo */
+        header {
+            background-color: PURPLE; /* Color de fondo del encabezado */
+            color: white; /* Color del texto del encabezado */
+            padding: 20px; /* Espaciado interno del encabezado */
+            display: flex; /* Para alinear elementos horizontalmente */
+            justify-content: space-between; /* Espacio entre elementos */
+            align-items: center; /* Centrar verticalmente */
+        }
+        header h4 {
+            font-family: 'Segoe Script', cursive; /* Cambia la fuente */
+            font-size: 17px; /* Tamaño de la fuente */
+            margin: 0; /* Elimina el margen para centrar mejor */
+            text-align: center; /* Alineación centrada */
+        }
+        header img {
+            width: 80px; /* Ancho del logo */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+        nav ul {
+            list-style-type: none; /* Quitar viñetas de la lista */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Alinear elementos horizontalmente */
+        }
+        nav ul li {
+            margin-right: 20px; /* Espacio entre elementos */
+        }
+        nav ul li a {
+            color: white; /* Color del texto del enlace */
+            text-decoration: none; /* Quitar subrayado del enlace */
+            padding: 10px 15px; /* Añadir espacio alrededor del texto */
+            border-radius: 5px; /* Añadir esquinas redondeadas */
+            transition: background-color 0.3s; /* Transición suave */
+        }
+        nav ul li a:hover {
+             text-decoration: underline; /* Cambiar el color de fondo al pasar el mouse */
+        }
+        .search-form {
+            display: flex;
+            align-items: center;
+        }
+        .search-form input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search-form button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+        }
+        footer {
+            background-color: PURPLE; /* Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+        .redes-sociales a:hover {
+              text-decoration: underline;/* Cambiar color al pasar el mouse */
+        }
+
+.gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+      grid-gap: 10px;
+      padding: 20px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+    }
+
+    .gallery div {
+      position: relative;
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+        .container {
+            text-align: center; /* Para centrar el contenido */
+        }
+
+        .container img {
+            display: block; /* Para que la imagen ocupe todo el ancho disponible */
+            margin: 0 auto; /* Para centrar la imagen */
+         
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h4>Explora el mundo a travez del vino, un sorbo a la vez</h4>
+    <!-- Cambia "ruta_del_logo.png" por la ruta de tu logo -->
+    <img src="https://i.pinimg.com/736x/c9/cb/58/c9cb587e9e93d8927533aff39c8dbc7c.jpg" class="logo">
+    <nav>
+             <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <div>
+                <li><a class="Vino-link">Vino</a></li>
+                <div class="categorias">
+                    <li><a href="vino blanco.html" style="color: black;">Vino Blanco</a></li>
+                    <li><a href="vinos rosa.html" style="color: black;">Vino Rosa</a></li>
+                    <li><a href="vinos tinto.htmlL" style="color: black;">Vino Tinto</a></li>
+                    <!-- Agrega más categorías según sea necesario -->
+                </div>
+            </div>
+            <li><a href="acerca de.html">Sobre nosotros</a></li>
+            <li><a href="geleria.html">Galeria</a></li>
+            <!-- Agrega más elementos de lista según sea necesario -->
+        </ul>
+    </nav>
+  
+</header>
+
+
+
+ <div class="gallery">
+     
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagen con texto</title>
+  <style>
+    .container {
+      text-align: center; /* Para centrar el contenido */
+    }
+    .container img {
+      display: block; /* Para que la imagen ocupe todo el ancho disponible */
+      margin: 0 auto; /* Para centrar la imagen */
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+ <H1><p>Herdi comenzo en principios del año 2024, todo comenzo que queriamos experimentar con los vinos y dar a las personas un buen vino que servir, nuestras bodegas estan ubicadas en comayagua nosotros mismos cultivamos nuestros viñedos, con amor creamos algo con que las personas puedan disfutr en momentos especiales </p></H1>
+  
+</div>
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagen con texto</title>
+  <style>
+    .container {
+      text-align: center; /* Para centrar el contenido */
+    }
+    .container img {
+      display: block; /* Para que la imagen ocupe todo el ancho disponible */
+      margin: 0 auto; /* Para centrar la imagen */
+    }
+
+
+   </style>
+</head>
+<body>
+<div class="container">
+ <img src="https://elmercantil.com/wp-content/uploads/2022/06/Pixabay.gif">
+ 
+</div>
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagen con texto</title>
+  <style>
+    .container {
+      text-align: center; /* Para centrar el contenido */
+    }
+    .container img {
+      display: block; /* Para que la imagen ocupe todo el ancho disponible */
+      margin: 0 auto; /* Para centrar la imagen */
+     }
+
+
+   </style>
+</head>
+</div>
+
+<footer>
+    <!-- Aquí puedes agregar el texto del pie de página -->
+    <p>Síguenos en nuestras redes sociales:</p>
+    <!-- Agrega enlaces a tus perfiles de redes sociales -->
+    <div class="redes-sociales">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <!-- Agrega más iconos de redes sociales según sea necesario -->
+    </div>
+    <p>&copy; 2024 Pie de página - Derechos de autor</p>
+
+</footer>
+
+<script>
+function cambiarIdioma() {
+    var idioma = document.getElementById('selectIdioma').value;
+    document.getElementById('htmlTag').setAttribute('lang', idioma);
+}
+     function cambiarIdioma() {
+            var idioma = document.getElementById('selectIdioma').value;
+            document.getElementById('htmlTag').setAttribute('lang', idioma);
+}
+document.addEventListener("DOMContentLoaded", function() {
+        var VinoLink = document.querySelector('.Vino-link');
+        var categorias = document.querySelector('.categorias');
+
+        VinoLink.addEventListener('click', function() {
+            if (categorias.style.display === "none" || categorias.style.display === "") {
+                categorias.style.display = "block";
+            } else {
+                categorias.style.display = "none";
+            }
+        });
+    });
+</script>
+
+
+</body>
+</HTML>

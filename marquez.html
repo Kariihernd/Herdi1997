@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERDI 1997</title>
+    <!-- Enlace opcional a tu archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Enlace a una biblioteca de iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilos para las categorías */
+        .categorias {
+            display: none;
+            position: absolute;
+            color:black;
+            background-color: #fefefe;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            padding: 10px;
+            z-index: 1;
+        }
+
+        /* Estilos para el enlace "Vino" */
+        .Vino-link {
+            cursor: pointer;
+        }
+
+        /* Estilos en línea para el ejemplo */
+        header {
+            background-color: PURPLE; /* Color de fondo del encabezado */
+            color: white; /* Color del texto del encabezado */
+            padding: 20px; /* Espaciado interno del encabezado */
+            display: flex; /* Para alinear elementos horizontalmente */
+            justify-content: space-between; /* Espacio entre elementos */
+            align-items: center; /* Centrar verticalmente */
+        }
+        header h4 {
+            font-family: 'Segoe Script', cursive; /* Cambia la fuente */
+            font-size: 15px; /* Tamaño de la fuente */
+            margin: 0; /* Elimina el margen para centrar mejor */
+            text-align: center; /* Alineación centrada */
+        }
+h6 {
+            font-family: 'sans serif', cursive; /* Cambia la fuente */
+            font-size: 20px; /* Tamaño de la fuente */
+            margin: 0; /* Elimina el margen para centrar mejor */
+            text-align: center; /* Alineación centrada */
+        }
+        header img {
+            width: 150px; /* Ancho del logo */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+        nav ul {
+            list-style-type: none; /* Quitar viñetas de la lista */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Alinear elementos horizontalmente */
+        }
+        nav ul li {
+            margin-right: 20px; /* Espacio entre elementos */
+        }
+        nav ul li a {
+            color: white; /* Color del texto del enlace */
+            text-decoration: none; /* Quitar subrayado del enlace */
+            padding: 10px 15px; /* Añadir espacio alrededor del texto */
+            border-radius: 5px; /* Añadir esquinas redondeadas */
+            transition: background-color 0.3s; /* Transición suave */
+        }
+        nav ul li a:hover {
+            text-decoration: underline; /* Cambiar el color de fondo al pasar el mouse */
+        }
+        .search-form {
+            display: flex;
+            align-items: center;
+        }
+        .search-form input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search-form button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+        }
+        footer {
+            background-color: PURPLE; /* Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+        .redes-sociales a:hover {
+            text-decoration: underline;/* Cambiar color al pasar el mouse */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        .historia-container,
+        .imagen-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .imagen-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h4>Explora el mundo a travez del vino, un sorbo a la vez</h4>
+    <!-- Cambia "ruta_del_logo.png" por la ruta de tu logo -->
+   <img src="https://i.pinimg.com/736x/c9/cb/58/c9cb587e9e93d8927533aff39c8dbc7c.jpg" class="logo">
+    <nav>
+           <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <div>
+                <li><a class="Vino-link">Vino</a></li>
+                <div class="categorias">
+                    <li><a href="vino blanco.html" style="color: black;">Vino Blanco</a></li>
+                    <li><a href="vinos rosa.html" style="color: black;">Vino Rosa</a></li>
+                    <li><a href="vinos tinto.htmlL" style="color: black;">Vino Tinto</a></li>
+                    <!-- Agrega más categorías según sea necesario -->
+                </div>
+            </div>
+            <li><a href="acerca de.html">Sobre nosotros</a></li>
+            <li><a href="geleria.html">Galeria</a></li>
+            <!-- Agrega más elementos de lista según sea necesario -->
+        </ul>
+    </nav>
+    <div class="search-form">
+        <input type="text" placeholder="Buscar...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+
+        <!-- Select para cambiar el idioma -->
+        <select id="selectIdioma" onchange="cambiarIdioma()">
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+        </select>
+
+    </div>
+</header>
+
+<div class="container">
+    <div class="historia-container">
+     <h2>   <p> ORIGEN:  El vino Marqués de Casa Concha proviene de Chile, específicamente de la prestigiosa bodega Concha y Toro. Esta bodega es conocida por producir vinos de alta calidad y cuenta con viñedos en diversas regiones vitivinícolas del país, como el Valle del Maipo, el Valle del Limarí, y el Valle de Casablanca.</p> 
+
+<p> COLOR:
+Presenta un color rosado claro y brillante, que refleja su frescura y pureza. El tono puede variar dependiendo del año y las condiciones de vinificación.</p> 
+
+<p> VARIEDADES DE UVA: Este vino rosado suele estar elaborado a partir de una cuidadosa selección de uvas, como la Pinot Noir y la Syrah. Estas variedades aportan características distintivas al vino, incluyendo su estructura y perfil aromático.</p> 
+
+<p> AROMA: El vino rosado Marqués de Casa Concha es conocido por su complejo y delicado perfil aromático. Se pueden encontrar notas de frutas rojas frescas como frutillas, cerezas y frambuesas, junto con matices florales y toques cítricos. Además, puede haber sutiles notas minerales, reflejo de su terroir de origen.</p> 
+
+<p> PALADAR:  En boca, este vino es elegante y equilibrado, con una acidez fresca que le aporta vivacidad. Los sabores frutales son predominantes, complementados por una textura suave y un final persistente. La estructura y complejidad del vino lo hacen destacar entre otros vinos rosados.</p> 
+
+<p> MARIDAJE:    El vino rosado Marqués de Casa Concha es versátil en cuanto a maridaje. Se recomienda acompañarlo con mariscos, pescados grasos como el salmón, ensaladas frescas, sushi, platos de cocina asiática y mediterránea. También es excelente como aperitivo.</p> 
+
+<p> Temperatura:Para disfrutar plenamente de sus características, se recomienda servir este vino rosado a una temperatura de entre 8°C y 10°C.</p> 
+<p> 
+Tamaño : 750mL<br>
+Alc./Vol. : 12%</p></h2>
+</div>
+<div class="imagen-container">
+<!-- Agrega la imagen del vino aquí -->
+<img src="https://marquesdecasaconcha.com/wp-content/uploads/2021/11/rose-1.png" alt="Imagen del vino" style="width: 50%; height: AUTO;">
+
+</div>
+
+</div>
+<footer>
+    <!-- Aquí puedes agregar el texto del pie de página -->
+    <p>Síguenos en nuestras redes sociales:</p>
+    <!-- Agrega enlaces a tus perfiles de redes sociales -->
+    <div class="redes-sociales">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <!-- Agrega más iconos de redes sociales según sea necesario -->
+    </div>
+    <p>&copy; 2024 Pie de página - Derechos de autor</p>
+</footer>
+<script>
+    function cambiarIdioma() {
+        var idioma = document.getElementById('selectIdioma').value;
+        document.getElementById('htmlTag').setAttribute('lang', idioma);
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var vinoLink = document.querySelector('.Vino-link');
+        var categorias = document.querySelector('.categorias');
+
+        vinoLink.addEventListener('click', function() {
+            if (categorias.style.display === "none") {
+                categorias.style.display = "block";
+            } else {
+                categorias.style.display = "none";
+            }
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERDI 1997</title>
+    <!-- Enlace opcional a tu archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Enlace a una biblioteca de iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilos para las categorías */
+        .categorias {
+            display: none;
+            position: absolute;
+            color: black;
+            background-color: #fefefe;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            padding: 10px;
+            z-index: 1;
+        }
+
+        /* Estilos para el enlace "Vino" */
+        .Vino-link {
+            cursor: pointer;
+        }
+
+        /* Estilos en línea para el ejemplo */
+        header {
+            background-color: PURPLE; /* Color de fondo del encabezado */
+            color: white; /* Color del texto del encabezado */
+            padding: 20px; /* Espaciado interno del encabezado */
+            display: flex; /* Para alinear elementos horizontalmente */
+            justify-content: space-between; /* Espacio entre elementos */
+            align-items: center; /* Centrar verticalmente */
+        }
+        header h4 {
+            font-family: 'Segoe Script', cursive; /* Cambia la fuente */
+            font-size: 15px; /* Tamaño de la fuente */
+            margin: 0; /* Elimina el margen para centrar mejor */
+            text-align: center; /* Alineación centrada */
+        }
+        h6 {
+            font-family: 'sans serif', cursive; /* Cambia la fuente */
+            font-size: 20px; /* Tamaño de la fuente */
+            margin: 0; /* Elimina el margen para centrar mejor */
+            text-align: center; /* Alineación centrada */
+        }
+        header img {
+            width: 150px; /* Ancho del logo */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+        nav ul {
+            list-style-type: none; /* Quitar viñetas de la lista */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Alinear elementos horizontalmente */
+        }
+        nav ul li {
+            margin-right: 20px; /* Espacio entre elementos */
+        }
+        nav ul li a {
+            color: white; /* Color del texto del enlace */
+            text-decoration: none; /* Quitar subrayado del enlace */
+            padding: 10px 15px; /* Añadir espacio alrededor del texto */
+            border-radius: 5px; /* Añadir esquinas redondeadas */
+            transition: background-color 0.3s; /* Transición suave */
+        }
+        nav ul li a:hover {
+            text-decoration: underline; /* Cambiar el color de fondo al pasar el mouse */
+        }
+        .search-form {
+            display: flex;
+            align-items: center;
+        }
+        .search-form input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search-form button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+        }
+        footer {
+            background-color: PURPLE; /* Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+        .redes-sociales a:hover {
+            text-decoration: underline; /* Cambiar color al pasar el mouse */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        .historia-container,
+        .imagen-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .imagen-container img {
+            width: 100%;
+            height: auto;
+        }
+        /* Estilos para la galería de fotos */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h4>Explora el mundo a través del vino, un sorbo a la vez</h4>
+    <!-- Cambia "ruta_del_logo.png" por la ruta de tu logo -->
+    <img src="https://i.pinimg.com/736x/c9/cb/58/c9cb587e9e93d8927533aff39c8dbc7c.jpg" class="logo">
+    <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <div>
+                <li><a class="Vino-link">Vino</a></li>
+                <div class="categorias">
+                    <li><a href="vino blanco.html" style="color: black;">Vino Blanco</a></li>
+                    <li><a href="vinos rosa.html" style="color: black;">Vino Rosa</a></li>
+                    <li><a href="vinos tinto.htmlL" style="color: black;">Vino Tinto</a></li>
+                    <!-- Agrega más categorías según sea necesario -->
+                </div>
+            </div>
+            <li><a href="acerca de.html">Sobre nosotros</a></li>
+            <li><a href="geleria.html">Galeria</a></li>
+            <!-- Agrega más elementos de lista según sea necesario -->
+        </ul>
+    </nav>
+  
+</header>
+
+
+
+<!-- Galería de Fotos -->
+<div class="gallery">
+    <img src="https://i.pinimg.com/564x/d5/08/58/d50858e275ac568b8fac17af18641b96.jpg" alt="Vino 1">
+    <img src="https://i.pinimg.com/564x/12/e3/a0/12e3a05a714c81c5b48f9d3c62b2854b.jpg" alt="Vino 2">
+    <img src="https://i.pinimg.com/564x/f4/f3/0e/f4f30e41d1d631639e2e0ecebbb563ea.jpg" alt="Vino 3">
+    <img src="https://i.pinimg.com/564x/b8/cd/69/b8cd69d727e72af4f01dbbd7651bb8b5.jpg" alt="Vino 4">
+    <img src="https://i.pinimg.com/564x/e5/a0/d0/e5a0d041c592f0d002a9bb997756ef38.jpg" alt="Vino 5">
+     <img src="https://i.pinimg.com/564x/4a/6f/82/4a6f8285503996773cbd04a0391871d7.jpg" alt="Vino 6">
+   <img src="https://i.pinimg.com/564x/8d/78/59/8d7859f1f102ee1f2e98713f14439a24.jpg" alt="Vino 7">
+   <img src="https://i.pinimg.com/564x/e9/3d/45/e93d45b8d3b0954bd87d83e419c5b8d1.jpg" alt="Vino 8">
+   <img src="https://i.pinimg.com/564x/c7/e5/3a/c7e53a1b13cb3a5a70f30686892d3fa0.jpg" alt="Vino 9">
+ <img src="https://i.pinimg.com/564x/70/d3/8e/70d38ed28ac553786c77bc261231ae2c.jpg" alt="Vino 10">
+ <img src="https://i.pinimg.com/564x/50/34/9f/50349f940099de6f9979c851f19732d9.jpg" alt="Vino 11">
+ <img src="https://i.pinimg.com/564x/95/aa/b9/95aab951184eb3eb481e632be34a2cd1.jpg" alt="Vino 12">
+ <img src="https://i.pinimg.com/564x/bc/38/59/bc3859fb0b1ca9b7d87004547fd954f0.jpg" alt="Vino 13">
+ <img src="https://i.pinimg.com/564x/28/4d/12/284d124a9503e5d125c8df3ff471566e.jpg" alt="Vino 14">
+<img src="https://i.pinimg.com/564x/b7/20/d0/b720d0a346ec15f36c4ea02c587efc31.jpg" alt="Vino 15">
+<img src="https://i.pinimg.com/564x/5d/89/07/5d8907b925218d270b003deaaf15881f.jpg" alt="Vino 16">
+<img src="https://i.pinimg.com/564x/16/ba/93/16ba9373950638e83deb4867e0d30633.jpg" alt="Vino 17">
+<img src="https://i.pinimg.com/564x/f8/f6/11/f8f611d66f1f5097ae7305a7790b21a3.jpg" alt="Vino 18">
+
+
+
+
+
+    <!-- Añade más imágenes según sea necesario -->
+</div>
+
+<footer>
+    <!-- Aquí puedes agregar el texto del pie de página -->
+    <p>Síguenos en nuestras redes sociales:</p>
+    <!-- Agrega enlaces a tus perfiles de redes sociales -->
+    <div class="redes-sociales">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <!-- Agrega más iconos de redes sociales según sea necesario -->
+    </div>
+    <p>&copy; 2024 Pie de página - Derechos de autor</p>
+</footer>
+
+<script>
+   
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var vinoLink = document.querySelector('.Vino-link');
+        var categorias = document.querySelector('.categorias');
+
+        vinoLink.addEventListener('click', function() {
+            if (categorias.style.display === "none") {
+                categorias.style.display = "block";
+            } else {
+                categorias.style.display = "none";
+            }
+        });
+    });
+</script>
+</body>
+</html>

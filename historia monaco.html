@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERDI 1997</title>
+    <!-- Enlace opcional a tu archivo CSS -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Enlace a una biblioteca de iconos (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilos para las categorías */
+        .categorias {
+            display: none;
+            position: absolute;
+            color:black;
+            background-color: #fefefe;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            padding: 10px;
+            z-index: 1;
+        }
+
+        /* Estilos para el enlace "Vino" */
+        .Vino-link {
+            cursor: pointer;
+        }
+
+        /* Estilos en línea para el ejemplo */
+        header {
+            background-color: PURPLE; /* Color de fondo del encabezado */
+            color: white; /* Color del texto del encabezado */
+            padding: 20px; /* Espaciado interno del encabezado */
+            display: flex; /* Para alinear elementos horizontalmente */
+            justify-content: space-between; /* Espacio entre elementos */
+            align-items: center; /* Centrar verticalmente */
+        }
+        header h4 {
+            font-family: 'Segoe Script', cursive; /* Cambia la fuente */
+            font-size: 15px; /* Tamaño de la fuente */
+            margin: 0; /* Elimina el margen para centrar mejor */
+            text-align: center; /* Alineación centrada */
+        }
+        header img {
+            width: 150px; /* Ancho del logo */
+            height: auto; /* Altura automática para mantener la proporción */
+        }
+        nav ul {
+            list-style-type: none; /* Quitar viñetas de la lista */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Alinear elementos horizontalmente */
+        }
+        nav ul li {
+            margin-right: 20px; /* Espacio entre elementos */
+        }
+        nav ul li a {
+            color: white; /* Color del texto del enlace */
+            text-decoration: none; /* Quitar subrayado del enlace */
+            padding: 10px 15px; /* Añadir espacio alrededor del texto */
+            border-radius: 5px; /* Añadir esquinas redondeadas */
+            transition: background-color 0.3s; /* Transición suave */
+        }
+        nav ul li a:hover {
+            text-decoration: underline; /* Cambiar el color de fondo al pasar el mouse */
+        }
+        .search-form {
+            display: flex;
+            align-items: center;
+        }
+        .search-form input[type="text"] {
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .search-form button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: white;
+            cursor: pointer;
+        }
+        footer {
+            background-color: PURPLE; /* Color de fondo del pie de página */
+            color: white; /* Color del texto del pie de página */
+            padding: 10px 20px; /* Espaciado interno del pie de página */
+            text-align: center; /* Alineación centrada */
+        }
+        footer p {
+            margin-bottom: 10px; /* Espacio inferior */
+        }
+        .redes-sociales a {
+            color: white; /* Color de los iconos */
+            margin: 0 10px; /* Espacio horizontal entre iconos */
+            font-size: 24px; /* Tamaño del icono */
+            transition: color 0.3s; /* Transición suave del color */
+        }
+        .redes-sociales a:hover {
+            text-decoration: underline;/* Cambiar color al pasar el mouse */
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        .historia-container,
+        .imagen-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .imagen-container img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h4>Explora el mundo a travez del vino, un sorbo a la vez</h4>
+    <!-- Cambia "ruta_del_logo.png" por la ruta de tu logo -->
+    <img src="https://i.pinimg.com/736x/c9/cb/58/c9cb587e9e93d8927533aff39c8dbc7c.jpg" class="logo">
+    <nav>
+      <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <div>
+                <li><a class="Vino-link">Vino</a></li>
+                <div class="categorias">
+                    <li><a href="vino blanco.html" style="color: black;">Vino Blanco</a></li>
+                    <li><a href="vinos rosa.html" style="color: black;">Vino Rosa</a></li>
+                    <li><a href="vinos tinto.htmlL" style="color: black;">Vino Tinto</a></li>
+                    <!-- Agrega más categorías según sea necesario -->
+                </div>
+            </div>
+            <li><a href="acerca de.html">Sobre nosotros</a></li>
+            <li><a href="geleria.html">Galeria</a></li>
+            <!-- Agrega más elementos de lista según sea necesario -->
+        </ul>
+    </nav>
+ 
+</header>
+
+<div class="container">
+    <div class="historia-container">
+     <h2>   <p> ORIGEN: Valle Central, VII Región de Chile.</p> 
+
+<p> COLOR: Chardonnay de un límpido color amarillo oro.</p> 
+
+<p> AROMA: Aroma intenso, de carácter tropical, con notas que recuerdan al durazno y la piña, con suaves toques de plátano en perfecta harmonía con dulces notas de vainilla.</p> 
+
+<p> PALADAR: En boca es un vino muy refrescante y frutal, de acidez balanceada y con una sensación final de dulzor que da un final prolongado y sedoso.</p> 
+
+<p> MARIDAJE: Perfecto con carnes blancas: pollo, aves de caza, cerdo y ternera. Ideal con pastas.</p> 
+
+<p> TEMPERATURA: Servir 10-12°C</p> 
+
+<p>
+Origen : Chile<br>
+Tamaño : 750mL<br>
+Alc./Vol. : 13% </p> </h2>
+</div>
+<div class="imagen-container">
+<!-- Agrega la imagen del vino aquí -->
+<img src="https://liquidindulgence.co.uk/wp-content/uploads/US-11th-Hour-Chardonnay.jpg" alt="Imagen del vino">
+</div>
+
+</div>
+<footer>
+    <!-- Aquí puedes agregar el texto del pie de página -->
+    <p>Síguenos en nuestras redes sociales:</p>
+    <!-- Agrega enlaces a tus perfiles de redes sociales -->
+    <div class="redes-sociales">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <!-- Agrega más iconos de redes sociales según sea necesario -->
+    </div>
+    <p>&copy; 2024 Pie de página - Derechos de autor</p>
+</footer>
+<script>
+   
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var vinoLink = document.querySelector('.Vino-link');
+        var categorias = document.querySelector('.categorias');
+
+        vinoLink.addEventListener('click', function() {
+            if (categorias.style.display === "none") {
+                categorias.style.display = "block";
+            } else {
+                categorias.style.display = "none";
+            }
+        });
+    });
+</script>
+</body>
+</html>
